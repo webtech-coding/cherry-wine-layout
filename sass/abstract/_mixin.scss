@@ -1,0 +1,15 @@
+@mixin transition{
+    transition: all .4s ease-in-out;
+}
+
+@mixin clearfix{
+    &::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+@mixin Responsive{
+
+}

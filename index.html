@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lyout</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Varela|Raleway|Open+Sans:600" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">  
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    
+</head>
+<body>
+    <div class="homepage__overlay"></div>
+
+    <nav class="navigation">           
+        <img src="img/logo.png" alt="" class="navigation__logo">
+        <form action="#" class="navigation__form">
+            <input type="text" class="navigation__form--search" placeholder="Search our products"/>
+            <button class="navigation__form--icon">
+                <svg class="search-icon">
+                    <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                </svg>               
+            </button>
+        </form>
+        <div class="navigation__menu" id="menuOpen">
+            <svg class="navigation__menu--icon">
+                <use xlink:href="img/menu.svg#icon-menu"></use>
+            </svg>
+        </div>
+    </nav>
+    <section class="sidebar__menu">    
+        <div class="sidebar__menu--icon">
+            <div class="navigation__menu" id="menuClose">
+                    <svg class="navigation__menu--icon">
+                            <use xlink:href="img/cross.svg#icon-cross"></use>
+                    </svg>
+            </div>    
+            <form action="#" class="navigation__form">
+                    <input type="text" class="navigation__form--search" placeholder="Search popular from menu"/>
+                    <button class="navigation__form--icon">
+                        <svg class="search-icon">
+                            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                        </svg>               
+                    </button>
+            </form>        
+        </div>      
+        <ul class="sidebar__menu--list">
+            <li class="menu__item">
+                <div class="menu__item--container">
+                    <span class="name">Products</span>
+                    <span class="icon"><i class="fas fa-angle-down"></i></span>
+                </div>                
+                <ul class="list-items__submenu open-init">
+                        <li class="list-items__submenu--list">All our products</li>
+                        <li class="list-items__submenu--list">Latest products</li>
+                        <li class="list-items__submenu--list">Health charts</li>
+                        <li class="list-items__submenu--list">Popular choices</li>
+                        <li class="list-items__submenu--list">Connected brannds</li>
+                        <li class="list-items__submenu--list">Distributers</li>
+                </ul>           
+            </li>
+            <li class="menu__item">
+                    <div class="menu__item--container">
+                        <span class="name">Brewery</span>
+                        <span class="icon"><i class="fas fa-angle-down"></i></span>
+                    </div>                
+                    <ul class="list-items__submenu">
+                            <li class="list-items__submenu--list">Brewery process</li>
+                            <li class="list-items__submenu--list">Modern brewery</li>
+                            <li class="list-items__submenu--list">Industries</li>
+                            <li class="list-items__submenu--list">Fermenting</li>
+                            <li class="list-items__submenu--list">Techologies</li>
+                            <li class="list-items__submenu--list">New methodologies</li>
+                            <li class="list-items__submenu--list">Filtering</li>
+                            <li class="list-items__submenu--list">Modern brewery</li>
+                            <li class="list-items__submenu--list">Breweing companies</li>
+                        </ul>
+                </li>
+                <li class="menu__item">
+                        <div class="menu__item--container">
+                            <span class="name">Order</span>
+                            <span class="icon"><i class="fas fa-angle-down"></i></span>
+                        </div>    
+                        <ul class="list-items__submenu">
+                                <li class="list-items__submenu--list">Order now</li>
+                                <li class="list-items__submenu--list">Pricing</li>
+                                <li class="list-items__submenu--list">Recent offers</li>
+                                <li class="list-items__submenu--list">Special offers</li>
+                                <li class="list-items__submenu--list">New pricinng</li>
+                                <li class="list-items__submenu--list">Payment methods</li>
+                                <li class="list-items__submenu--list">Special offers</li>
+                        </ul>            
+                                 
+                    </li>
+                    <li class="menu__item">
+                            <div class="menu__item--container">
+                                <span class="name">Reviews</span>
+                                <span class="icon"><i class="fas fa-angle-down"></i></span>
+                            </div>
+                            <ul class="list-items__submenu">
+                                    <li class="list-items__submenu--list">People Love us</li>
+                                    <li class="list-items__submenu--list">View reviews</li>
+                                    <li class="list-items__submenu--list">Post your views</li>
+                                   
+                            </ul>                
+                                 
+                        </li>
+                        <li class="menu__item">
+                                <div class="menu__item--container">
+                                    <span class="name">FAQs</span>
+                                    <span class="icon"><i class="fas fa-angle-down"></i></span>
+                                </div>   
+                                <ul class="list-items__submenu">
+                                        <li class="list-items__submenu--list">All FAQs</li>
+                                        <li class="list-items__submenu--list">About us</li>
+                                        <li class="list-items__submenu--list">The history</li>
+                                        <li class="list-items__submenu--list">Managements</li>
+                                        <li class="list-items__submenu--list">Location</li>
+                                        <li class="list-items__submenu--list">Customer reviews</li>
+                                        <li class="list-items__submenu--list">Health issues</li>
+                                </ul>             
+                                  
+                            </li>
+        </ul>
+        
+    </section>
+
+    <section class="front">
+       <div class="front__overlay">
+           <h1 class="front__overlay--heading">Cherry Wine</h1>
+           <p class="front__overlay--subheading">
+            Try our newest wine, directly brewed from grapes and apples.
+            Great for your test, great for your health.
+           </p>
+       </div>        
+    </section>
+
+    <section class="media row">
+        <div class="col-1-of-4 media__item">
+            <svg class="media__item--icon">
+                <use xlink:href="img/logoicons.svg#icon-truck"></use>
+            </svg>            
+               
+            <div class="media__item--header">Next Day Delivery</div>
+            <div class="media__item--text">Order us the wine of your choice and 
+                we deliver it to you next day.</div>         
+        </div>
+        <div class="col-1-of-4 media__item">
+            <svg class="media__item--icon">
+                <use xlink:href="img/logoicons.svg#icon-network"></use>
+            </svg>
+            <div class="media__item--header">Quality Excellency</div>
+            <div class="media__item--text">Order us the wine of your choice and 
+                we deliver it to you next day.</div>           
+        </div>
+        <div class="col-1-of-4 media__item">
+            <svg class="media__item--icon">
+                <use xlink:href="img/logoicons.svg#icon-heart"></use>
+            </svg>  
+            <div class="media__item--header">Customers Love Us</div>
+            <div class="media__item--text">Order us the wine of your choice and 
+                we deliver it to you next day.</div>         
+        </div>
+        <div class="col-1-of-4 media__item">
+            <svg class="media__item--icon">
+                <use xlink:href="img/logoicons.svg#icon-feather"></use>
+            </svg> 
+            <div class="media__item--header">Customers' Heath motto</div>
+            <div class="media__item--text">Order us the wine of your choice and 
+                we deliver it to you next day.</div>          
+        </div>        
+    </section>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/effect.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "layout-wine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  },
+  "scripts": {
+    "sass": "node-sass --watch sass -o css"
+  },
+  "author": "Shovit",
+  "license": "ISC"
+}

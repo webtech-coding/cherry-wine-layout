@@ -1,0 +1,239 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-weight: 100;
+  font-family: "Lato"; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem)/2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem)/3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem)/4); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem)/3) + 6rem); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem)/4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem)/4) + 2 * 6rem); }
+
+.front {
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.1)), url("../img/celan-bg.jpg");
+  height: 70vh;
+  background-size: cover;
+  background-position: right;
+  position: relative; }
+  .front__overlay {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    color: #faf9f9; }
+    .front__overlay--heading {
+      font-size: 6rem;
+      font-weight: 100;
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+      display: inline-block;
+      font-family: "Varela"; }
+    .front__overlay--subheading {
+      font-size: 1.4rem;
+      width: 45rem;
+      margin-top: .5rem;
+      letter-spacing: .2rem;
+      line-height: 2rem; }
+
+.navigation {
+  height: 6.5rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center; }
+
+.navigation__logo {
+  height: 2.6rem;
+  padding-left: 2rem; }
+
+.navigation__form {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .navigation__form--search {
+    padding: .8rem 2rem;
+    outline: none;
+    box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.8);
+    border-radius: .5rem 0 0 .5rem;
+    width: 80%;
+    transition: all .4s ease-in-out; }
+    .navigation__form--search:focus {
+      color: #777;
+      width: 100%; }
+  .navigation__form--icon {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0.6));
+    height: 3.1rem;
+    width: 3rem;
+    margin-left: .2rem;
+    border-radius: 0 .5rem .5rem 0;
+    outline: none;
+    cursor: pointer;
+    transition: all .4s ease-in-out; }
+    .navigation__form--icon .search-icon {
+      background-color: transparent;
+      height: 1.8rem;
+      width: 1.8rem;
+      fill: #faf9f9; }
+    .navigation__form--icon:hover {
+      background-image: linear-gradient(to right, rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.6));
+      transform: scale(1.05);
+      border-radius: .4rem; }
+  .navigation__form ::-webkit-input-placeholder {
+    font-size: 1rem;
+    color: #777; }
+
+.navigation__menu {
+  margin-right: 2rem;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0.6));
+  font-size: 2rem;
+  width: 3rem;
+  text-align: center;
+  padding-top: .5rem;
+  cursor: pointer;
+  transition: all .4s ease-in-out; }
+  .navigation__menu--icon {
+    height: 2.2rem;
+    width: 2.2rem;
+    fill: #faf9f9; }
+  .navigation__menu:hover {
+    background-image: linear-gradient(to right, rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.6));
+    transform: scale(1.05);
+    border-radius: .4rem; }
+
+.homepage__overlay {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(119, 119, 119, 0.4);
+  position: fixed;
+  z-index: 100;
+  display: none; }
+
+.media {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+  .media__item {
+    text-align: center; }
+    .media__item--icon {
+      width: 3.5rem;
+      height: 4rem;
+      fill: #ee5252;
+      display: inline-block; }
+    .media__item--header {
+      font-size: 1.8rem;
+      margin: 1rem 0rem;
+      font-weight: 600;
+      font-family: "Open Sans"; }
+    .media__item--text {
+      color: #777;
+      font-weight: 100;
+      font-family: "Varela";
+      font-size: 1.4rem;
+      padding: 0rem 1rem; }
+
+.sidebar__menu {
+  position: fixed;
+  z-index: 200;
+  width: 35rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 0;
+  right: -40rem;
+  min-height: 100vh;
+  box-shadow: 1rem 0rem 5rem black;
+  transition: all .4s ease-in-out; }
+  .sidebar__menu--icon {
+    background: #fff;
+    height: 6.5rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center; }
+    .sidebar__menu--icon .navigation__form {
+      flex: 0 0 80%; }
+  .sidebar__menu--list {
+    padding: 2rem;
+    font-family: "RaleWay";
+    list-style: none; }
+    .sidebar__menu--list .menu__item {
+      padding: 1rem 0rem; }
+      .sidebar__menu--list .menu__item--container {
+        padding: .5rem 1rem;
+        height: 4rem;
+        background-color: #333;
+        cursor: pointer;
+        transition: all .4s ease-in-out; }
+        .sidebar__menu--list .menu__item--container:hover {
+          background-color: #000;
+          padding-left: 2rem; }
+        .sidebar__menu--list .menu__item--container .name {
+          font-size: 1.6rem;
+          color: #333;
+          font-weight: 500;
+          text-transform: uppercase;
+          float: left;
+          display: block;
+          height: 2rem;
+          width: 50%;
+          color: #faf9f9;
+          padding: .5rem 0rem; }
+        .sidebar__menu--list .menu__item--container .icon {
+          font-size: 1.6rem;
+          font-weight: 100;
+          float: left;
+          display: block;
+          text-align: right;
+          width: 50%;
+          color: #faf9f9;
+          padding: .5rem 0rem; }
+      .sidebar__menu--list .menu__item .list-items__submenu {
+        list-style: none;
+        display: none; }
+        .sidebar__menu--list .menu__item .list-items__submenu--list {
+          padding: 1rem 0rem;
+          font-size: 1.6rem;
+          font-family: "Lato";
+          color: #777;
+          padding-left: 4rem;
+          background-color: #f4f2f2;
+          cursor: pointer;
+          transition: all .4s ease-in-out; }
+          .sidebar__menu--list .menu__item .list-items__submenu--list:hover {
+            background-color: rgba(255, 0, 0, 0.8);
+            color: #faf9f9;
+            padding-left: 3.5rem; }
+          .sidebar__menu--list .menu__item .list-items__submenu--list:not(:last-child) {
+            border-bottom: 0.1rem dotted rgba(153, 153, 153, 0.5); }
+      .sidebar__menu--list .menu__item .open-init {
+        display: block; }

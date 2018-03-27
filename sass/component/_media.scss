@@ -1,0 +1,30 @@
+.media{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    &__item{
+       text-align: center;       
+        &--icon{
+            width:3.5rem;
+            height:4rem;  
+            fill:rgb(238, 82, 82);       
+            display: inline-block;    
+        }
+        &--header{
+            font-size:1.8rem;
+            margin: 1rem 0rem;
+            font-weight: 600;
+            font-family: "Open Sans";
+        }
+        &--text{
+            color: $grey-dark-2;
+            font-weight: 100;
+            font-family: "Varela";
+            font-size: 1.4rem;
+            padding:0rem 1rem;
+            
+        }
+    }
+    
+}

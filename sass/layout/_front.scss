@@ -1,0 +1,30 @@
+.front{
+    background-image:linear-gradient(to right,rgba(red,.2), rgba(red,.1)),url("../img/celan-bg.jpg");
+    height: 70vh;
+    background-size: cover;   
+    background-position: right; 
+    position: relative;
+
+    &__overlay{
+        position:absolute;
+        top: 40%;
+        left:5%;        
+        color:$grey-light-1;
+        
+        &--heading{
+            font-size: 6rem;
+            font-weight: 100;
+            letter-spacing: .2rem;
+            text-transform: uppercase;
+            display: inline-block;
+            font-family: "Varela";
+        }
+        &--subheading{
+            font-size: 1.4rem;           
+            width:45rem;
+            margin-top: .5rem;
+            letter-spacing: .2rem;
+            line-height: 2rem;
+        }
+    }
+}
