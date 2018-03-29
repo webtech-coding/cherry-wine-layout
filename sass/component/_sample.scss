@@ -1,7 +1,44 @@
 .sample{    
-    margin-top: 10rem;
-    background-image: linear-gradient(to right, rgba(red,.4), rgba(red,.2)),url("../img/winecover.jpg");
     height: 30rem;
-    background-position: top;
+    background-image: linear-gradient(to right, rgba(green,.6), rgba(0,0,0,.8)),url("../img/winecover.jpg");
     background-size: cover;
+    background-position: right;
+    position: relative;
+    font-family: "Verala";
+    text-align: center;
+   
+    
+    &__content{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+
+        &--text{
+            font-size: 6rem;
+            font-weight: 500;
+            color:$grey-light-1;     
+            @include Responsive(tab-port){
+                font-size: 4rem;
+            }       
+        }
+        &--button{
+            border-radius: 0rem;
+            padding:1rem 2rem; 
+            font-size: 2rem;
+            font-family: "Verala";
+            background: rgba(0,0,0,.6);
+            color:$grey-light-1;
+            border-radius: .2rem;
+            outline: none;
+            box-shadow: 0rem 0rem .2rem .2rem rgba(255,255,255,.2);    
+            cursor: pointer; 
+            @include transition;     
+            
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
 }
