@@ -1,0 +1,21 @@
+.social{
+    background-color:#080808;
+    height:6rem;
+    text-align: center;       
+    span{
+       line-height: 6rem;
+       font-size: 1.6rem;
+       color: $grey-light-1;
+       text-align: center;
+       @include transition;
+       line-height: 6rem;
+       padding:1.8rem;
+       cursor: pointer;
+    
+        &:hover{
+            font-size: 1.7rem;
+            background: red;
+            color:$grey-light-1;
+        }
+    }
+}
