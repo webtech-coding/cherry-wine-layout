@@ -20,6 +20,10 @@
                 color:$grey-dark-2;
                 width: 100%;
             }
+
+            @include Responsive(phone){
+                display: none;          
+            }
         } 
         &--icon{               
             background-image: linear-gradient(to right, rgba(red,.8), rgba(red,.6));          
@@ -40,6 +44,9 @@
                 background-image: linear-gradient(to right, rgba($grey-dark-1,.8), rgba($grey-dark-1,.6));
                 transform: scale(1.05);
                 border-radius: .4rem;            
+            }
+            @include Responsive(phone){
+                display: none;          
             }
         }
         

@@ -31,8 +31,17 @@ body {
     width: calc((100% - 6rem)/2); }
   .row .col-1-of-3 {
     width: calc((100% - 2 * 6rem)/3); }
+    @media only screen and (max-width: 37.5em) {
+      .row .col-1-of-3 {
+        width: 100%; } }
   .row .col-1-of-4 {
     width: calc((100% - 3 * 6rem)/4); }
+    @media only screen and (max-width: 56.25em) {
+      .row .col-1-of-4 {
+        width: 40%; } }
+    @media only screen and (max-width: 37.5em) {
+      .row .col-1-of-4 {
+        width: 100%; } }
   .row .col-2-of-3 {
     width: calc(2 * ((100% - 2 * 6rem)/3) + 6rem); }
   .row .col-2-of-4 {
@@ -51,6 +60,14 @@ body {
     top: 40%;
     left: 5%;
     color: #faf9f9; }
+    @media only screen and (max-width: 37.5em) {
+      .front__overlay {
+        width: 90%; } }
+    @media only screen and (min-width: 112.5em) {
+      .front__overlay {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); } }
     .front__overlay--heading {
       font-size: 6rem;
       font-weight: 100;
@@ -58,19 +75,39 @@ body {
       text-transform: uppercase;
       display: inline-block;
       font-family: "Varela"; }
+      @media only screen and (max-width: 37.5em) {
+        .front__overlay--heading {
+          font-size: 3rem; } }
+      @media only screen and (min-width: 112.5em) {
+        .front__overlay--heading {
+          font-size: 10rem;
+          font-weight: 200;
+          text-align: center;
+          width: 100rem; } }
     .front__overlay--subheading {
       font-size: 1.4rem;
       width: 45rem;
       margin-top: .5rem;
       letter-spacing: .2rem;
       line-height: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .front__overlay--subheading {
+          width: 80%;
+          text-align: justify; } }
+      @media only screen and (min-width: 112.5em) {
+        .front__overlay--subheading {
+          text-align: justify;
+          width: 100rem;
+          text-align: center;
+          font-size: 1.8rem; } }
 
 .navigation {
+  max-width: 114rem;
   height: 6.5rem;
   display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center; }
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto; }
 
 .navigation__logo {
   height: 2.6rem;
@@ -91,6 +128,9 @@ body {
     .navigation__form--search:focus {
       color: #777;
       width: 100%; }
+    @media only screen and (max-width: 37.5em) {
+      .navigation__form--search {
+        display: none; } }
   .navigation__form--icon {
     background-image: linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0.6));
     height: 3.1rem;
@@ -109,6 +149,9 @@ body {
       background-image: linear-gradient(to right, rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.6));
       transform: scale(1.05);
       border-radius: .4rem; }
+    @media only screen and (max-width: 37.5em) {
+      .navigation__form--icon {
+        display: none; } }
   .navigation__form ::-webkit-input-placeholder {
     font-size: 1rem;
     color: #777; }
@@ -140,12 +183,13 @@ body {
   display: none; }
 
 .media {
-  margin-top: 5rem;
-  display: flex;
-  justify-content: center;
-  align-content: center; }
+  margin-top: 5rem; }
   .media__item {
     text-align: center; }
+    @media only screen and (max-width: 37.5em) {
+      .media__item {
+        margin-top: 1rem;
+        padding: 0rem 3rem; } }
     .media__item--icon {
       width: 3.5rem;
       height: 4rem;
@@ -162,6 +206,67 @@ body {
       font-family: "Varela";
       font-size: 1.4rem;
       padding: 0rem 1rem; }
+      @media only screen and (max-width: 37.5em) {
+        .media__item--text {
+          padding-bottom: 1rem;
+          border-bottom: 0.1rem solid #f4f2f2; } }
+
+.gallery__container {
+  cursor: pointer;
+  z-index: 5;
+  overflow: hidden;
+  transition: all .4s ease-in-out; }
+  .gallery__container:hover {
+    box-shadow: 0rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5); }
+    @media only screen and (max-width: 37.5em) {
+      .gallery__container:hover {
+        box-shadow: 0rem 0rem 0rem rgba(0, 0, 0, 0.5); } }
+  @media only screen and (max-width: 56.25em) {
+    .gallery__container {
+      box-shadow: 0rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5); } }
+  @media only screen and (max-width: 37.5em) {
+    .gallery__container {
+      padding: 5rem 5rem 0rem 5rem;
+      margin: 0 auto;
+      box-shadow: 0rem 0rem 0rem rgba(0, 0, 0, 0.5); } }
+
+.gallery__header {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  font-family: "Open Sans";
+  margin: .2rem 0rem;
+  padding: 1.2rem; }
+
+.gallery__text {
+  padding: 1rem 1.2rem;
+  color: #999;
+  font-weight: 100;
+  font-family: "Varela";
+  font-size: 1.4rem;
+  text-align: justify; }
+  .gallery__text--link {
+    margin-top: 1rem;
+    color: #157e15;
+    font-weight: 400;
+    transition: all .4s ease-in-out;
+    cursor: pointer; }
+    .gallery__text--link:hover {
+      letter-spacing: .1rem; }
+
+.gallery__img {
+  height: 100%;
+  width: 100%;
+  transition: all .4s ease-in-out; }
+  .gallery__img:hover {
+    transform: scale(1.03); }
+
+.sample {
+  margin-top: 10rem;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.2)), url("../img/winecover.jpg");
+  height: 30rem;
+  background-position: top;
+  background-size: cover; }
 
 .sidebar__menu {
   position: fixed;

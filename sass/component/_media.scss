@@ -1,10 +1,12 @@
 .media{
-    margin-top: 5rem;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    margin-top: 5rem;    
     &__item{
-       text-align: center;       
+       text-align: center;     
+       
+        @include Responsive(phone){
+            margin-top: 1rem;
+            padding:0rem 3rem;            
+        }
         &--icon{
             width:3.5rem;
             height:4rem;  
@@ -23,8 +25,11 @@
             font-family: "Varela";
             font-size: 1.4rem;
             padding:0rem 1rem;
-            
+            @include Responsive(phone){               
+                padding-bottom: 1rem;
+                border-bottom: .1rem solid $grey-light-2;
+            }
         }
-    }
+    }    
     
 }

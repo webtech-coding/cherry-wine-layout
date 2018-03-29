@@ -5,8 +5,7 @@
     background-color:rgba(#fff,.8);
     top:0;
     right: -40rem;   
-    min-height: 100vh;
-    
+    min-height: 100vh;    
     box-shadow: 1rem 0rem 5rem black;  
     @include transition; 
     &--icon{
@@ -21,7 +20,6 @@
             flex:0 0 80%;
         }
     }
-
     &--list{
         padding:2rem;
         font-family: "RaleWay";
@@ -89,17 +87,12 @@
                     &:not(:last-child){
                         border-bottom: .1rem dotted rgba($grey-dark-3,.5);
                     }
-
                 }
             } 
             .open-init{
                 display: block;
             }           
         }
-        
-        
-       
     }
-
    
 }

@@ -1,0 +1,62 @@
+.gallery{
+      
+    &__container{
+        cursor: pointer;
+        z-index: 5;
+        overflow: hidden;
+        @include transition;      
+        &:hover{
+            box-shadow: 0rem .3rem .6rem rgba(0,0,0,.5);
+            @include Responsive(phone){            
+                box-shadow: 0rem 0rem 0rem rgba(0,0,0,.5);
+            }
+        }       
+        @include Responsive(tab-port){
+            box-shadow: 0rem .3rem .6rem rgba(0,0,0,.5);
+        }  
+        @include Responsive(phone){            
+            padding:5rem 5rem 0rem 5rem;
+            margin: 0 auto;
+            box-shadow: 0rem 0rem 0rem rgba(0,0,0,.5);
+        }
+        
+    }
+
+    &__header{
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $grey-dark-1;
+        font-family: "Open Sans";
+        margin: .2rem 0rem;
+        padding: 1.2rem;        
+
+    }
+    &__text{
+        padding: 1rem 1.2rem;
+        color: $grey-dark-3;
+        font-weight: 100;
+        font-family: "Varela";
+        font-size: 1.4rem;
+        text-align: justify;
+
+        &--link{
+            margin-top: 1rem;
+            color: rgb(21, 126, 21);
+            font-weight: 400;  
+            @include transition;
+            cursor: pointer;            
+            &:hover{
+                letter-spacing: .1rem;
+            }         
+        }
+    }
+    &__img{
+        height:100%;
+        width: 100%;
+        @include transition;  
+        &:hover{
+            transform: scale(1.03);
+        }
+    }
+    
+}
